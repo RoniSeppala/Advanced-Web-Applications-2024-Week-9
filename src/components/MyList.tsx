@@ -9,14 +9,19 @@ type TItem = {
 interface ListProps {
     header:string;
     items:TItem[];
+    setItems: React.Dispatch<React.SetStateAction<TItem[]>>;
 }
 
-const MyList:React.FC<ListProps> = ({header,items}) => {
+const MyList:React.FC<ListProps> = ({header,items, setItems}) => {
 
     const onItemClick = (item: TItem) => {
         console.log("Item clicked: ", item.id);
 
-        item.lineThroughState = !item.lineThroughState;
+        const updatedItems = items.map(i => 
+            i.id === item.id ? { ...i, lineThroughState: !i.lineThroughState } : i
+        );
+
+        setItems(updatedItems);
     }
 
     return (

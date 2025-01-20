@@ -40,7 +40,7 @@ const MyContainer:React.FC<MyContainerProps> = ({containerName}) => {
     return (
         <div>
         <h1>{ containerName }</h1>
-            <MyList header="My List" items={items} />
+            <MyList header="My List" items={items} setItems={setItems} />
             <form onSubmit={handleSubmit}>
                 <textarea placeholder="Add item" onChange={(e) => setTextContent(e.target.value)} value={textContent}/>
                 <button type="submit">Add</button>
