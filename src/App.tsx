@@ -1,6 +1,5 @@
 import './App.css'
 import MyContainer from './components/MyContainer'
-import React from 'react'
 
 function App() {
 
