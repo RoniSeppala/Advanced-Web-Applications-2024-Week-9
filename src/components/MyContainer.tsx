@@ -8,10 +8,6 @@ type TItem = {
 
 interface MyContainerProps {
     containerName: string;
-    items?: {
-        id: string;
-        text: string;
-    }[];
 }
 
 const MyContainer:React.FC<MyContainerProps> = ({containerName}) => {
