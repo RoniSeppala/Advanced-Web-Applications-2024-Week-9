@@ -9,7 +9,7 @@ type TItem = {
 interface ListProps {
     header:string;
     items:TItem[];
-    setItems: React.Dispatch<React.SetStateAction<TItem[]>>;
+    setItems?: React.Dispatch<React.SetStateAction<TItem[]>>;
 }
 
 const MyList:React.FC<ListProps> = ({header,items, setItems}) => {
@@ -21,7 +21,11 @@ const MyList:React.FC<ListProps> = ({header,items, setItems}) => {
             i.id === item.id ? { ...i, lineThroughState: !i.lineThroughState } : i
         );
 
-        setItems(updatedItems);
+        if (setItems){
+            setItems(updatedItems);
+        } else {
+            console.log("No setItems function provided");
+        }
     }
 
     return (
