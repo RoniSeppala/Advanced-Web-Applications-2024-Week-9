@@ -9,7 +9,7 @@ const MyContainer:React.FC<MyContainerProps> = ({containerName}) => {
     return (
         <div>
         <h1>{ containerName }</h1>
-        <MyList listItems={["item1", "item2", "item3"]} />
+        <MyList header="My List" items={[{id:"1",text:"Item 1"},{id:"2",text:"Item 2"},{id:"3",text:"Item 3"}]} />
         </div>
     );
 }
