@@ -7,7 +7,7 @@ type TItem = {
 };
 
 interface MyContainerProps {
-    containerName: string;
+    containerName?: string;
 }
 
 const MyContainer:React.FC<MyContainerProps> = ({containerName}) => {
