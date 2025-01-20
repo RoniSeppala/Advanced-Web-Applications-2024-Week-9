@@ -3,7 +3,7 @@ import React from "react";
 type TItem = {
     id: string;
     text: string;
-    lineThroughState: boolean;
+    lineThroughState?: boolean;
 };
 
 interface ListProps {
