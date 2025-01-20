@@ -27,10 +27,12 @@ const MyContainer:React.FC<MyContainerProps> = ({containerName}) => {
     ]);
 
     const handleSubmit = (e: React.FormEvent) => {
-        // Add item to list
         e.preventDefault();
+        // Add item to list
 
         addItem({ text: textContent });
+
+        setTextContent("");
 
     }
 
