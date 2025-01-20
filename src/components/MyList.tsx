@@ -33,7 +33,7 @@ const MyList:React.FC<ListProps> = ({header,items, setItems}) => {
             <h1>{header}</h1>
             <ol>
                 {items.map((item) => (
-                    <li key={item.id} className={item.lineThroughState ? "line" : ""} onClick={() => onItemClick(item)}>{item.text}</li>
+                    <li key={item.id} className={item.lineThroughState ? "line-through" : ""} onClick={() => onItemClick(item)}>{item.text}</li>
                 ))}
             </ol>
         </div>
